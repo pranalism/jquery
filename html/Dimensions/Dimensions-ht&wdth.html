@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<title>Demo JQuery Dimensions</title>
+</head>
+<style>
+.main{
+	width: 600px;
+	height: 400px;
+	background: #336633;
+	color: #FFFFFF;
+}
+.container{
+	width: 200px;
+	background: #FFCC66;
+	padding: 50px;
+    margin: 5px;
+	border: 3px #000000 solid;
+	color: black;
+	position:absolute;
+	top: 105px;
+	left: 145px;	
+}
+</style>
+<body>
+	<div class="main">
+		<div class="container">
+			Sample text to test the dimensions of the element. <br/> Add more text here to see how the dimension changes.
+		</div>
+	</div>
+	<div class="variant"></div>
+	<button id="mh1">Get Main Ht</button>
+</body>
+
+<script type="text/javascript">
+(function($){
+$(document).ready(function(){
+	
+	// get various heights for Window, Document, Main element and Container element
+	
+    var DocHt = $(document).height();
+	console.log("Doc Ht: ",DocHt );
+	var WinHt = $(window).height();
+	console.log("Win Ht: ",WinHt ); 
+    var DocWd = $(document).width();
+	console.log("Doc Wd: ",DocWd );
+	var WinWd = $(window).width();
+	console.log("Win Wd: ",WinWd ); 
+	
+	var mainHt = $(".main").height();
+	console.log("Main Ht: ",mainHt );
+	var innermainHt = $(".main").innerHeight();
+	console.log("Main inner Ht: ",innermainHt );
+    var outermainHt = $(".main").outerHeight();
+	console.log("Main outer Ht: ",outermainHt );
+    var outermainHtTrue = $(".main").outerHeight(true);
+	console.log("Main outer Ht with true: ",outermainHtTrue );
+
+    var mainWdth = $(".main").width();
+	console.log("Main Ht: ",mainWdth );
+    var innerWdthMain = $(".main").innerWidth();
+	console.log("Main inner wdth: ",innerWdthMain );
+    var outerWdthMain = $(".main").outerWidth();
+	console.log("Main outer wdth: ",outerWdthMain );
+    var outerWdthMainTr = $(".main").outerWidth(true);
+	console.log("Main outer wdth with true: ",outerWdthMainTr );
+	
+	var containerHt = $(".container").height();
+	console.log("Container Ht: ",containerHt );
+	var innercontHt = $('.container').innerHeight();
+	console.log("Container inner Ht: ",innercontHt );
+    var outercontHt = $('.container').outerHeight();
+	console.log("Container outer Ht: ",outercontHt );
+    var outercontHt = $('.container').outerHeight(true);
+	console.log("Container outer Ht with true: ",outercontHt );
+
+    var containerWdth = $(".container").width();
+	console.log("Container Ht: ",containerWdth );
+    var innerWdthCont = $(".container").innerWidth();
+	console.log("Container inner wdth: ",innerWdthCont );
+    var outerWdthCont = $(".container").outerWidth();
+	console.log("Container outer wdth: ",outerWdthCont );
+    var outerWdthContTr = $(".container").outerWidth(true);
+	console.log("Container outer wdth with true: ",outerWdthContTr );
+	
+	/*//using heights and widths to highlight the portion of the element
+	function showWidth( ele, w ) {
+		$( "div" ).text( "The width for the " + ele + " is " + w + "px." );
+	}
+	$( "#mh1" ).click(function() {
+	  showWidth( "paragraph", $( "p" ).width() );
+	});*/
+	
+	
+	
+	
+});
+})(jQuery);
+
+</script>
+</html>
